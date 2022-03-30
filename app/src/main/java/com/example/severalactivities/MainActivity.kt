@@ -18,11 +18,13 @@ class MainActivity : AppCompatActivity() {
 //           Intent - намерение, механизм описания операции
             //создать намерение вызвать вторую активити
             val act2_start = Intent(this, activ2::class.java)
-            val name = binding.textView.text.toString()
+            val name = binding.name.text.toString()
+            val age = binding.age.text.toString()
             //метод putExtra класса Intent позволяет отдавать данные в связке ключ+значение
             act2_start.putExtra("name", name)
+            act2_start.putExtra("age", age)
             //запуск второго активити
-startActivity(act2_start)
+            startActivity(act2_start)
         }
     }
 }
